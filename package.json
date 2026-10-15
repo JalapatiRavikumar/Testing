@@ -1,0 +1,12 @@
+{
+  "name": "testing-qa",
+  "version": "1.0.0",
+  "description": "QA Testing Suites - Restful Booker API & UI",
+  "scripts": {
+    "test:api": "npm --prefix restful-booker-qa run test:api",
+    "test:ui": "npm --prefix restful-booker-qa run test:ui",
+    "test:ui:headed": "npm --prefix restful-booker-qa run test:ui:headed",
+    "test:ui:report": "npm --prefix restful-booker-qa run test:ui:report",
+    "test": "npm --prefix restful-booker-qa run test"
+  }
+}
