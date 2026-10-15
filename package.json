@@ -1,12 +1,12 @@
 {
-  "name": "testing-qa",
+  "name": "restful-booker-qa",
   "version": "1.0.0",
-  "description": "QA Testing Suites - Restful Booker API & UI",
+  "description": "API and UI testing for Restful Booker",
   "scripts": {
-    "test:api": "npm --prefix restful-booker-qa run test:api",
-    "test:ui": "npm --prefix restful-booker-qa run test:ui",
-    "test:ui:headed": "npm --prefix restful-booker-qa run test:ui:headed",
-    "test:ui:report": "npm --prefix restful-booker-qa run test:ui:report",
-    "test": "npm --prefix restful-booker-qa run test"
+    "test:api": "newman run postman/restful-booker.collection.json -e postman/restful-booker.environment.json -r \"cli,htmlextra\" --reporter-htmlextra-export postman/reports/api-report.html",
+    "test:ui": "npm --prefix playwright run test",
+    "test:ui:headed": "npm --prefix playwright run test:headed",
+    "test:ui:report": "npm --prefix playwright run test:report",
+    "test": "npm run test:api && npm run test:ui"
   }
 }
